@@ -3,10 +3,42 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <OutputType>WinExe</OutputType>
+
+    <!-- 
+        *******************************************************************************************
+        CoreRT size optimization settings. Not mandatory, but produces smaller size.
+        More at http://aka.ms/OptimizeCoreRT
+        *******************************************************************************************
+    -->
+    <IlcInvariantGlobalization>true</IlcInvariantGlobalization>
+    <IlcGenerateCompleteTypeMetadata>false</IlcGenerateCompleteTypeMetadata>
+    <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
+    <IlcOptimizationPreference>Size</IlcOptimizationPreference>
   </PropertyGroup>
 
   <ItemGroup>
+    <!--*******************************************************************************************
+    * Use CoreRT: after referencing Microsoft.DotNet.ILCompiler package below,                    *
+    * dotnet publish -r win-x64 -c Release                                                        *
+    * is going to publish this app with CoreRT instead of CoreCLR.                                *
+    ********************************************************************************************-->
+    <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="1.0.0-alpha-*" />
+
     <PackageReference Include="WebWindow.Blazor" Version="$(SamplesWebWindowPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--*******************************************************************************************
+    * The RD.XML file describes dynamic behavior of the app (makes MakeGenericType work, mostly). *
+    ********************************************************************************************-->
+    <RdXmlFile Include="rd.xml" />
+
+    <!--*******************************************************************************************
+    * Wish we didn't have to do this: allows reflection on framework implementation details.      *
+    * Blazor does this. If it didn't reflect on fragile implementation details of the framework,  *
+    * we would get even smaller deployment size.                                                  *
+    ********************************************************************************************-->
+    <IlcArg Include="--nometadatablocking" />
   </ItemGroup>
 
   <ItemGroup>
@@ -14,5 +46,4 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
 </Project>

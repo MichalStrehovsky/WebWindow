@@ -1,0 +1,22 @@
+<Directives>
+    <Application>
+
+        <!-- The System.Text.Json entries are going away once https://github.com/dotnet/corefx/issues/41398 is fixed. -->
+        <Assembly Name="System.Text.Json">
+            <Type Name="System.Text.Json.JsonPropertyInfoNotNullable`4[[System.Object,mscorlib],[System.Int32,mscorlib],[System.Int32,mscorlib],[System.Int32,mscorlib]]" Dynamic="Required All" />
+            <Type Name="System.Text.Json.JsonPropertyInfoNotNullable`4[[System.Object,mscorlib],[System.Int64,mscorlib],[System.Int64,mscorlib],[System.Int64,mscorlib]]" Dynamic="Required All" />
+            <Type Name="System.Text.Json.JsonPropertyInfoNotNullable`4[[System.Object,mscorlib],[System.UInt64,mscorlib],[System.UInt64,mscorlib],[System.UInt64,mscorlib]]" Dynamic="Required All" />
+            <Type Name="System.Text.Json.JsonPropertyInfoNotNullable`4[[System.Object,mscorlib],[System.Double,mscorlib],[System.Double,mscorlib],[System.Double,mscorlib]]" Dynamic="Required All" />
+            <Type Name="System.Text.Json.JsonPropertyInfoNotNullable`4[[System.Object,mscorlib],[System.Boolean,mscorlib],[System.Boolean,mscorlib],[System.Boolean,mscorlib]]" Dynamic="Required All" />
+            <Type Name="System.Text.Json.JsonPropertyInfoNotNullable`4[[System.Object,mscorlib],[System.DateTime,mscorlib],[System.DateTime,mscorlib],[System.DateTime,mscorlib]]" Dynamic="Required All" />
+        </Assembly>
+
+        <Assembly Name="Microsoft.AspNetCore.Components">
+            <Type Name="Microsoft.AspNetCore.Components.Reflection.MemberAssignment+PropertySetter`2[[Microsoft.AspNetCore.Components.Routing.NavLink,Microsoft.AspNetCore.Components.Web],[Microsoft.AspNetCore.Components.Routing.NavLinkMatch,Microsoft.AspNetCore.Components.Web]]" Dynamic="Required All" />
+        </Assembly>
+
+        <Assembly Name="Microsoft.JSInterop">
+            <Type Name="Microsoft.JSInterop.Infrastructure.TaskGenericsUtil+TaskResultGetter`1[[System.Threading.Tasks.VoidTaskResult,System.Private.CoreLib]]" Dynamic="Required All" />
+        </Assembly>
+    </Application>
+</Directives>
