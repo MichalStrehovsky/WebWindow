@@ -17,6 +17,48 @@
 
         <Assembly Name="Microsoft.JSInterop">
             <Type Name="Microsoft.JSInterop.Infrastructure.TaskGenericsUtil+TaskResultGetter`1[[System.Threading.Tasks.VoidTaskResult,System.Private.CoreLib]]" Dynamic="Required All" />
+            <Type Name="Microsoft.JSInterop.Infrastructure.TaskGenericsUtil+TcsResultSetter`1[[System.Object,mscorlib]]" Dynamic="Required All" />
         </Assembly>
+
+
+        <Assembly Name="BlazorDesktopApp" Dynamic="Required All" />
+
+        <Assembly Name="Microsoft.Extensions.Logging.Console">
+            <Type Name="Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider" Dynamic="Required All" />
+        </Assembly>
+
+        <Assembly Name="Microsoft.Extensions.Options">
+            <Type Name="Microsoft.Extensions.Options.OptionsMonitor`1[[Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions,Microsoft.Extensions.Logging.Console]]" Dynamic="Required All" />
+            <Type Name="Microsoft.Extensions.Options.OptionsFactory`1[[Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions,Microsoft.Extensions.Logging.Console]]" Dynamic="Required All" />
+            <Type Name="Microsoft.Extensions.Options.OptionsCache`1[[Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions,Microsoft.Extensions.Logging.Console]]" Dynamic="Required All" />
+        </Assembly>
+
+        <Assembly Name="Microsoft.Extensions.Logging.Configuration">
+            <Type Name="Microsoft.Extensions.Logging.Configuration.LoggerProviderConfigureOptions`2[[Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions,Microsoft.Extensions.Logging.Console],[Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider,Microsoft.Extensions.Logging.Console]]" Dynamic="Required All" />
+            <Type Name="Microsoft.Extensions.Logging.Configuration.LoggerProviderConfiguration`1[[Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider,Microsoft.Extensions.Logging.Console]]" Dynamic="Required All" />
+            <Type Name="Microsoft.Extensions.Logging.Configuration.LoggerProviderConfigurationFactory" Dynamic="Required All" />
+            <Type Name="Microsoft.Extensions.Logging.Configuration.LoggerProviderOptionsChangeTokenSource`2[[Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions,Microsoft.Extensions.Logging.Console],[Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider,Microsoft.Extensions.Logging.Console]]" Dynamic="Required All" />
+        </Assembly>
+
+        <Assembly Name="Microsoft.AspNetCore.Components">
+            <Type Name="Microsoft.AspNetCore.Components.Routing.Router" Dynamic="Required All" />
+            <Type Name="Microsoft.AspNetCore.Components.Reflection.MemberAssignment+PropertySetter`2[[Microsoft.AspNetCore.Components.Routing.Router],[Microsoft.AspNetCore.Components.NavigationManager]]" Dynamic="Required All" />
+            <Type Name="Microsoft.AspNetCore.Components.LayoutView" Dynamic="Required All" />
+            <Type Name="Microsoft.AspNetCore.Components.RouteView" Dynamic="Required All" />
+            <Type Name="Microsoft.AspNetCore.Components.LayoutComponentBase" Dynamic="Required All" />
+        </Assembly>
+
+        <Assembly Name="Microsoft.AspNetCore.Components.Web">
+            <Type Name="Microsoft.AspNetCore.Components.Routing.NavLink" Dynamic="Required All" />
+            <Type Name="Microsoft.AspNetCore.Components.RenderTree.WebEventDescriptor" Dynamic="Required All" />
+            <Type Name="Microsoft.AspNetCore.Components.Web.MouseEventArgs" Dynamic="Required All" />
+        </Assembly>
+
+        <Assembly Name="WebWindow.Blazor" Dynamic="Required All" />
+
+        <Assembly Name="Microsoft.Extensions.Logging">
+            <Type Name="Microsoft.Extensions.Logging.ProviderAliasAttribute" Dynamic="Required All" />
+        </Assembly>
+
     </Application>
 </Directives>
